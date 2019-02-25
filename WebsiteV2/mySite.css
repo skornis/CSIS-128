@@ -1,0 +1,305 @@
+
+.bold {
+	font-weight: bold;
+}
+.red
+{
+	background-color:red;
+	font-size: smaller;
+}
+.yellow {
+	background-color:yellow;
+	font-size: smaller;
+}
+.orange {
+	background-color:orange;
+	font-size: smaller;
+}
+.blue {
+	background-color:cyan;
+	font-size: smaller;
+}
+.green {
+	background-color:green;
+	font-size: smaller;
+}
+
+body {	font-size: 100%;
+		background-color: white;
+		color: black;
+		font-family: 'Roboto', sans-serif;}
+
+
+header
+ {	background-color: white;
+	color: #F0F0F0;
+	text-align: center;
+	display: block;
+	height: 100%;
+}
+
+header img {
+	background-color: white;
+	width: 100%;
+}
+
+h2, h3, h4 {
+	color: darkred;
+	margin-left: -10px;
+}
+
+h2 p {
+	color: dimgray;
+}
+
+nav{	
+		padding: 1px;
+		background-color: darkred;
+		border-top-left-radius: 80px 80px;
+		border-bottom-right-radius: 80px 80px;
+	}
+	
+nav li{	
+		display: inline-block;
+	}
+	
+nav a
+	{	padding: 1.1em;
+		font-weight: bold;
+		font-size: 1.2em;}
+
+nav ul
+	{	text-align: center;
+		padding: 0;
+		margin: .5em;}
+
+nav a:link 
+{		color: white;
+		text-decoration: none;}
+
+nav a:visited
+{		color: white;}
+
+nav a:hover
+{		color: white;
+		background-color: crimson;}
+
+	
+main {	padding-left: 2em;
+		padding-right: 2em;
+		background-color: white;
+		display: block;
+		overflow: auto;
+		display: block;}
+
+
+dt {	color: indigo;
+		font-size: 1.1em;
+		font-weight: bold;
+		font-family: Georgia, "Times New Roman", serif;}
+
+img {	border: none;}
+
+table {	margin: 1em;
+		border: 2px solid dimgray;
+		border-collapse: collapse;
+		width: 95%;
+}
+
+th {
+	padding: 1px;
+}
+
+td, tr, th{
+	/* padding: .5em; */
+	text-align: center;
+	padding:0;
+	border: 2px solid dimgray;/*dark blue*/
+	}
+	
+label {
+	margin-bottom: 1em;
+	text-align: right;
+	float: left;
+	display: block;
+	width: 15em;
+	padding-right: 1em;
+}
+
+input, textarea {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.centered-video {
+	margin: 2em;
+	text-align: center;
+}
+
+#mySubmit {
+	margin-left: 9.5em;
+}
+
+.writtenArea {
+	padding: 1em;
+	margin: 1em;
+	width: 100%;
+}
+
+.writtenArea a {
+	color: darkred;
+	font-size: larger;
+	text-decoration: none;
+}
+
+.smallPic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	opacity: 60%;
+	height: auto;
+
+}
+.category
+{	font-weight: bold;
+	color: indigo;
+	text-shadow: 1px 1px 1px #667;
+	font-family: Georgia, "Times New Roman", serif;}
+
+footer
+{	padding: .5em;
+	text-align: center;
+	background-color: white;
+	border-top: 1px solid darkred;
+	color:darkred;
+	font-size: .8em;
+	font-style: italic;
+	display: block;}
+
+footer a {
+	color: darkred;
+}
+	
+/* * {	box-sizing: border-box;} */
+
+#wrapper
+{	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	min-width: 700px;}
+	
+#mobile
+{	display: none;}
+
+#xsmallmobile
+{	display: none;}
+
+#desktop
+{	display: inline;}
+
+@media only screen and (max-width: 1024px) /*configures for view on tablet*/
+{	header {	
+		height: 100%}
+	
+	body 
+	{	margin: 0;
+		padding: 0;
+		background-color: white;
+		background-image: none;}
+
+	body a {
+		color: indigo;
+	}
+	
+	#wrapper
+	{	margin: 0;
+		width: auto;
+		min-width: 0;}
+	
+	h1 
+	{	margin: 0;
+		font-size: 10vw;
+		line-height: 250%;}
+	
+	main
+	{	font-size: 90%;
+		margin: 0;
+		padding-left: 2em;}
+
+	table, tr, td, th {
+		border: 1px solid black;
+	}
+		
+	footer	
+	{	margin: 0}
+}
+
+@media only screen and (max-width: 768px) /*configures for view on tablet*/
+{	
+	header
+	{	
+		background-size: 100% auto;
+		background-color: gainsboro;
+		color: #F0F0F0;
+		text-align: center;
+		display: block;}
+		
+	h1 
+	{	font-size: 10vw;
+		line-height: 250%;}
+		
+	nav {
+		background-color: white;
+		border-bottom-right-radius: 0;
+		border-top-left-radius: 0;
+
+	}
+	nav a
+	{	display: block;
+		padding: .4em;
+		font-size: 1em;
+		background-color: darkred;
+		border-radius: 20px;
+		border: 1px solid white;}
+		
+	nav li
+	{	display: block;}
+		
+	nav ul
+	{	text-align: center;
+		padding: 0;
+		margin: 0;}
+		
+	main
+	{	padding-left: 1em;}
+		
+	.category
+	{	text-shadow: none;}
+	
+	#mobile
+	{	display: inline;}
+
+	#desktop
+	{	display: none;}
+
+	#xsmallmobile
+	{display: none;}
+
+	table, tr, td, th {
+		border: 1px solid black;
+	}
+}
+
+@media only screen and (max-width: 500px)
+{
+	#mobile
+	{	display: none;}
+
+	#desktop
+	{	display: none;}
+
+	#xsmallmobile
+	{display: inline;}
+}

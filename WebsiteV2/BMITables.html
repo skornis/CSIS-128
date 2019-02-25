@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+
+<title>be fit. not fat.</title>
+	
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="mySite.css">
+
+</head>
+
+<body>
+<div id="wrapper">
+
+<header><img src="header2.jpg" alt="be fit, not fat header"></header>
+
+<nav>
+		<ul>
+			<li><a href = "index.html">Home</a></li>
+			<li><a href = "BMITables.html">BMI</a></li>
+			<li><a href = "calculators.html">Calculators</a></li>
+			<li><a href = "gettingStarted.html">Getting Started</a></li>
+			<li><a href = "FAQ.html">More Information</a></li>
+		</ul>
+</nav>
+
+<div id="wrapper" class="writtenArea">
+	<img src="scaleAndTape.jpg" alt="Weight scale and measuring tape" class="smallPic">
+	<h2>What is BMI?</h2>
+	<p>BMI stands for Body Mass Index. It is calculated based on a ratio of your weight and height and is used as a general guideline to determine possible health risks.</p>
+	<p>If you've heard of BMI before, you may have also heard that it's not accurate for individual people because it was created to evaluate the risk of the general population. There is come truth to this, 
+		however, determining your BMI is a good place to start when deciding if you need to lose weight.</p>
+	<p>The BMI table below will allow you to determine your current BMI. If you are overweight or obese, even losing just 10 pounds can help reduce health risks associated with being overweight or obese.</p>
+	<p>If you would like, you may use the BMI <a href="calculators.html" alt="link to calculator page">CALCULATOR</a> intead.</p>
+</div>
+
+<main style="margin-top: 0px;">
+	<div id="desktop">
+		<div id="container"></div>
+	</div>
+	<div id="mobile">
+		<div id="smallcontainer"></div>
+	</div>
+	<div id="xsmallmobile">
+		<div id="xsmallcontainer"></div>
+	</div>
+</main>	
+
+</div>
+<footer>
+	Copyright &copy; 2019 be fit. not fat.<br>
+		<a href="mailto:s1233191@student.mcckc.edu">email</a></footer>
+
+
+
+<script>
+
+	function BMI(height,weight)
+	{
+		return (weight * 703) / (height * height);
+	}
+
+	function findWeight(calculatedBMI, height)
+	{
+		return (calculatedBMI * height * height / 703);
+	}
+
+	function CreateTable()
+	{
+		
+		var table = document.createElement('table');
+
+		var trHdrBMI = document.createElement('tr');
+		var tdHdrBMIWeight = document.createElement('td');
+		var tdHdrBMI = document.createElement('td');
+		
+
+		tdHdrBMIWeight.appendChild(new Text("Weight"));
+		trHdrBMI.appendChild(tdHdrBMIWeight);
+
+		tdHdrBMI.colSpan = "40";
+		tdHdrBMI.appendChild(new Text("BMI"));
+		trHdrBMI.appendChild(tdHdrBMI);
+		
+		trHdrBMI.className = "bold";
+
+		table.appendChild(trHdrBMI);
+
+		var trHdrWeight = document.createElement('tr');
+		var tdHdrWeightCorner = document.createElement('td');
+
+		tdHdrWeightCorner.appendChild(new Text("(pounds)"));
+		trHdrWeight.appendChild(tdHdrWeightCorner);
+
+		for (var cell = 58; cell < 77; cell=cell+1)
+		{
+			var heightFeet = Math.floor(cell / 12);
+			var heightInches = cell % 12;
+			var tdHdrWeight = document.createElement('td');
+			tdHdrWeight.className = "bold";
+			tdHdrWeight.appendChild(new Text(heightFeet + "\'" + heightInches + "\""));
+			trHdrWeight.appendChild(tdHdrWeight);
+		}
+
+		trHdrWeight.className = "bold";
+
+		table.appendChild(trHdrWeight);
+
+		for (var row = 85; row <=250 ; row = row + 5) {
+			var tr = document.createElement('tr');
+			var tdHdr = document.createElement('td');
+			tdHdr.className = "bold";
+			tdHdr.appendChild(new Text(row));
+			tr.appendChild(tdHdr);
+			for (var cell = 58; cell < 77; cell++) {
+				var td = document.createElement('td')
+			
+				var value =  BMI(cell, row);
+
+				if (value < 18.5)
+					td.className="blue";
+				else if(value >= 18.5 & value < 25)
+					td.className="green";
+				else if(value >= 25 & value < 30)
+					td.className = "yellow";
+				else if (value >= 30 & value < 35)
+					td.className = "orange";
+				else
+					td.className = "red";
+
+				cellText = Math.round( value);
+				
+				td.appendChild(new Text(cellText));
+				tr.appendChild(td);
+			}
+			table.appendChild(tr);
+		}
+		document.getElementById('container').appendChild(table);
+	}
+
+	function CreateSmallTable()
+	{
+		
+		var table = document.createElement('table');
+
+		var trHdrBMI = document.createElement('tr');
+		var tdHdrBMI = document.createElement('td');
+
+		tdHdrBMI.colSpan = "40";
+		tdHdrBMI.appendChild(new Text("BMI Weight Ranges"));
+		trHdrBMI.appendChild(tdHdrBMI);
+
+		trHdrBMI.className = "bold";
+
+		table.appendChild(trHdrBMI);
+
+		var trHdrRanges = document.createElement('tr');
+		var tdHdrRanges = document.createElement('td');
+
+		tdHdrRanges.appendChild(new Text("Height"));
+		trHdrRanges.appendChild(tdHdrRanges);
+
+		tdHdrRanges = document.createElement('td');
+		tdHdrRanges.colSpan = "2";
+
+		tdHdrRanges.appendChild(new Text("Healthy Range"));
+		trHdrRanges.appendChild(tdHdrRanges);
+
+		tdHdrRanges = document.createElement('td');
+		tdHdrRanges.colSpan = "2";
+
+		tdHdrRanges.appendChild(new Text("Overweight"));
+		trHdrRanges.appendChild(tdHdrRanges);
+
+		tdHdrRanges = document.createElement('td');
+		tdHdrRanges.colSpan = "2";
+
+		tdHdrRanges.appendChild(new Text("Obese"));
+		trHdrRanges.appendChild(tdHdrRanges);
+
+		trHdrRanges.className = "bold";
+
+		table.appendChild(trHdrRanges);
+
+
+		for (var row = 58; row <77 ; row++) {
+			var heightFeet = Math.floor(row / 12);
+			var heightInches = row % 12;
+
+			var tr = document.createElement('tr');
+			var tdHdr = document.createElement('td');
+			tdHdr.className = "bold";
+			tdHdr.appendChild(new Text(heightFeet + "\'" + heightInches + "\""));
+			tr.appendChild(tdHdr);
+
+			var minHealthyBMI = 18.5;
+			{
+				var td = document.createElement('td')
+				td.className="green";
+
+				var value =  findWeight(minHealthyBMI, row);
+
+				cellText = Math.round( value);
+				
+				td.appendChild(new Text(cellText));
+				tr.appendChild(td);
+			}
+
+			var maxHealthyBMI = 24.99;
+			{
+				var td = document.createElement('td')
+				td.className="green";
+
+				var value =  findWeight(maxHealthyBMI, row);
+
+				cellText = Math.round( value);
+				
+				td.appendChild(new Text(cellText));
+				tr.appendChild(td);
+			}
+
+			var minOverweightBMI = 25;
+			{
+				var td = document.createElement('td')
+				td.className="yellow";
+
+				var value =  findWeight(minOverweightBMI, row);
+
+				cellText = Math.round( value);
+				
+				td.appendChild(new Text(cellText));
+				tr.appendChild(td);
+			}
+
+			var maxOverweightBMI = 29.99;
+			{
+				var td = document.createElement('td')
+				td.className="yellow";
+
+				var value =  findWeight(maxOverweightBMI, row);
+
+				cellText = Math.round( value);
+				
+				td.appendChild(new Text(cellText));
+				tr.appendChild(td);
+			}
+
+			var minObeseBMI = 30;
+			{
+				var td = document.createElement('td')
+				td.className="red";
+
+				var value =  findWeight(minObeseBMI, row);
+
+				cellText = Math.round( value);
+				
+				td.appendChild(new Text(cellText));
+				tr.appendChild(td);
+			}
+
+			table.appendChild(tr);
+		}
+		document.getElementById('smallcontainer').appendChild(table);
+	}
+
+	function CreateXSmallTable()
+	{
+		
+		var table = document.createElement('table');
+
+		var trHdrBMI = document.createElement('tr');
+		var tdHdrBMI = document.createElement('td');
+
+		tdHdrBMI.colSpan = "40";
+		tdHdrBMI.appendChild(new Text("BMI Weight Ranges"));
+		trHdrBMI.appendChild(tdHdrBMI);
+
+		trHdrBMI.className = "bold";
+
+		table.appendChild(trHdrBMI);
+
+		var trHdrRanges = document.createElement('tr');
+		var tdHdrRanges = document.createElement('td');
+
+		tdHdrRanges.appendChild(new Text("Height"));
+		trHdrRanges.appendChild(tdHdrRanges);
+
+		tdHdrRanges = document.createElement('td');
+		tdHdrRanges.colSpan = "2";
+
+		tdHdrRanges.appendChild(new Text("Healthy Range"));
+		trHdrRanges.appendChild(tdHdrRanges);
+
+		trHdrRanges.className = "bold";
+
+		table.appendChild(trHdrRanges);
+
+
+		for (var row = 58; row <77 ; row++) {
+			var heightFeet = Math.floor(row / 12);
+			var heightInches = row % 12;
+
+			var tr = document.createElement('tr');
+			var tdHdr = document.createElement('td');
+			tdHdr.className = "bold";
+			tdHdr.appendChild(new Text(heightFeet + "\'" + heightInches + "\""));
+			tr.appendChild(tdHdr);
+
+			var minHealthyBMI = 18.5;
+			{
+				var td = document.createElement('td')
+				td.className="green";
+
+				var value =  findWeight(minHealthyBMI, row);
+
+				cellText = Math.round( value);
+				
+				td.appendChild(new Text(cellText));
+				tr.appendChild(td);
+			}
+
+			var maxHealthyBMI = 24.99;
+			{
+				var td = document.createElement('td')
+				td.className="green";
+
+				var value =  findWeight(maxHealthyBMI, row);
+
+				cellText = Math.round( value);
+				
+				td.appendChild(new Text(cellText));
+				tr.appendChild(td);
+			}
+
+			table.appendChild(tr);
+		}
+		document.getElementById('xsmallcontainer').appendChild(table);
+	}
+
+	CreateTable();
+	CreateSmallTable();
+	CreateXSmallTable();
+
+	</script>
+</body>
+
+</html>
