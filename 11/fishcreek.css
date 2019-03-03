@@ -1,0 +1,209 @@
+body {	background-color: #5280C5;
+		color: #003366;
+		font-family: Verdana, Aria, sans-serif;
+		background-image: url(gradientblue.jpg);/*uses gradient blue background*/}
+
+header
+{	background-image: url(bigfish.gif);/*big fish logo*/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #000066;/*dark blue*/
+	color: #F0F0F0;
+	text-align: center;
+	display: block;}
+
+h1 {	line-height: 250%;
+		text-indent: 1em;
+		text-shadow: 2px 2px 1px #CCCCCC;
+		font-size: 3em;
+		padding: 0.2em;
+		margin-bottom: 0;}
+
+h4 {	font-family: Georgia, "Times New Roman", serif;
+		color: #333999;}
+
+nav {	float: left;
+		width: 180px;
+		font-weight: bold;
+		padding: 5px;
+		display: block;}
+
+nav a {	text-decoration: none;}
+
+nav a:link 
+{		color: #000066;}
+
+nav a:visited
+{		color: #5280C5;}
+
+nav a:hover
+{		color: #3262A3;}
+
+nav ul
+{		list-style-type: none;}
+	
+main {	margin-left: 180px;
+		padding-left: 2em;
+		padding-right: 2em;
+		border: 1px solid #AEC3E3;
+		background-color: white;
+		display: block;
+		overflow: auto;
+		display: block;}
+
+
+dt {	color: #5280C5;
+		font-size: 1.1em;
+		font-weight: bold;
+		font-family: Georgia, "Times New Roman", serif;}
+
+img {	border: none;}
+
+table {	margin: 1em;
+		border: 2px solid #000066;/*dark blue*/
+		border-collapse: collapse;
+}
+
+td, th{
+	padding: .5em;
+	border: 1px solid #000066;/*dark blue*/
+	}
+	
+label {
+	text-align: right;
+	float: left;
+	display: block;
+	width: 8em;
+	padding-right: 1em;
+}
+
+input, textarea {
+	display: block;
+	margin-bottom: 1em;
+}
+
+video {
+	float: right;
+	margin: 1em;
+}
+
+#mySubmit {
+	margin-left: 9.5em;
+}
+
+.category
+{	font-weight: bold;
+	color: #5380C5;
+	text-shadow: 1px 1px 1px #667;
+	font-family: Georgia, "Times New Roman", serif;}
+
+footer
+{	margin-left: 180px;
+	padding-left: 2em;
+	padding-right: 2em;
+	text-align: center;
+	background-color: #AEC3EC;
+	font-size: .70em;
+	font-style: italic;
+	display: block;}
+	
+* {	box-sizing: border-box;}
+
+#wrapper
+{	background-color: #F0F0F0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	min-width: 700px;}
+	
+#mobile
+{	display: none;}
+
+#desktop
+{	display: inline;}
+
+@media only screen and (max-width: 1024px) /*configures for view on tablet*/
+{	body 
+	{	margin: 0;
+		padding: 0;
+		background-color: white;
+		background-image: none;}
+	
+	#wrapper
+	{	margin: 0;
+		width: auto;
+		min-width: 0;}
+	
+	h1 
+	{	margin: 0;
+		font-size: 1.8em;
+		line-height: 200%;}
+	
+	nav
+	{	float: none;
+		padding: 0;
+		width: auto;}
+	
+	nav li
+	{	display: inline-block;}
+	
+	nav a
+	{	padding: 1em;
+		font-size: 1.2em;}
+	
+	nav ul
+	{	text-align: center;
+		padding: 0;
+		margin: 0;}
+	
+	main
+	{	font-size: 90%;
+		margin: 0;
+		padding-left: 2em;}
+		
+	footer	
+	{	margin: 0}
+}
+
+
+@media only screen and (max-width: 768px) /*configures for view on tablet*/
+{	
+	header
+	{	background-image: url(lilfish.gif);/*little fish logo*/
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: #000066;/*dark blue*/
+		color: #F0F0F0;
+		text-align: center;
+		display: block;}
+		
+	h1 
+	{	font-size: 1.5em;
+		line-height: 120%;}
+		
+	nav a
+	{	display: block;
+		padding: .2em;
+		font-size: 1em;
+		border-bottom: 1px solid #330000;}
+		
+	nav li
+	{	display: block;}
+		
+	nav ul
+	{	text-align: center;
+		padding: 0;
+		margin: 0;}
+		
+	main
+	{	padding-left: 1em;}
+		
+	.category
+	{	text-shadow: none;}
+	
+	#mobile
+	{	display: inline;}
+
+	#desktop
+	{	display: none;}
+}
