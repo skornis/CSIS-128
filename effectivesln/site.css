@@ -12,7 +12,7 @@ body {
     font-size: larger;
 }
 
-.cyan nav {
+.cyan nav a{
     border: 2px solid cyan !important;
 }
 
@@ -32,7 +32,7 @@ body {
     font-size: larger;
 }
 
-.neon nav {
+.neon nav a {
 	border: 2px solid greenyellow;
 }
 
@@ -43,7 +43,7 @@ body {
     font-size: larger;
 }
 
-.orange nav {
+.orange nav a{
 	border: 2px solid orange;
 }
 
