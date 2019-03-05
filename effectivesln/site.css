@@ -1,0 +1,227 @@
+body {	
+    font-size: 100%;
+    background-color: rgb(5,5,5);
+	color: white;
+    font-family: 'consolas', sans-serif;
+}
+
+.cyan {
+    color: cyan !important;
+    font-family: 'consolas', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.container p {
+    padding: 24px;
+    opacity: .8;
+    margin: 24px;
+    text-align: center;
+    background-color: rgb(15,15,15);
+    border-radius: 24px;
+}
+.neon {
+    color: greenyellow !important;
+    font-family: 'consolas', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.orange {
+    color: orange !important;
+    font-family: 'consolas', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.crimson{
+    color: crimson !important;
+    font-family: 'consolas', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+header {	
+    color: orange;
+    font-size: 54px;
+    font-weight: bold;
+    text-align: right;
+    width: auto;
+    padding: 24px 48px 0 0;
+    background-color: rgb(15,15,15);
+    border-radius: 48px;
+    margin: 24px;
+}
+
+
+nav {
+    margin-top: 40px;
+    text-align: center;
+    width: auto;
+    font-size: 24px;
+}
+	
+nav a {
+    padding: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color:  rgb(25, 25, 25);
+    border-radius: 12px;
+    border: 2px solid rgb(25, 25, 25);
+}
+a {	
+	font-weight: bold;
+    font-size: 20px;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {		
+    color: white;
+    background-color: crimson;
+}
+
+a.crimson:hover {
+    background-color: orange;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+main {
+}
+
+footer {	
+    position: relative;
+    left: 0;
+	bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin: 12px;
+    border-top: 4px solid rgb(20,20,20);
+    border-radius: 24px;
+}
+
+footer p {
+    margin: 0;
+    padding: 4px;
+}
+.smallPic {
+    width: 25%;
+    height: auto;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    border: 2px solid black;
+}
+
+.picCard {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 128px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.smallPic:hover {
+	transform: scale(2);
+    border: 16px solid crimson;
+    z-index: 1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fitPic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	height: auto;
+}
+
+#wrapper {  
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+    min-width: 700px;
+}
+
+#desktop {	
+    display: inline;
+}
+
+#mobile {	
+    display: none;
+}
+
+#xsmallmobile {	
+    display: none;
+}
+
+
+@media only screen and (max-width: 1024px) /*configures for view on tablet*/
+{	
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+    }
+    
+    footer {
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 768px) /*configures for view on tablet*/
+{	
+#desktop {
+    display: none;}
+
+#mobile {	
+    display: inline;}
+
+#xsmallmobile {
+    display: none;}
+
+nav a {
+    margin: 0;
+    padding: 0 32px;
+    z-index: 1;}
+
+#wrapper {  
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 300px;
+}
+}
+
+@media only screen and (max-width: 500px) {
+
+header {
+    padding-right: 32px;
+    padding-top: 24px;
+}
+#mobile {
+    display: none;}
+
+#desktop {
+    display: none;}
+
+#xsmallmobile {
+    display: inline;}
+}
+}
