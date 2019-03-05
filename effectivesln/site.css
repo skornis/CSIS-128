@@ -12,7 +12,7 @@ body {
     font-size: larger;
 }
 
-.cyan a {
+.cyan nav {
     border: 1px solid cyan !important;
 }
 
