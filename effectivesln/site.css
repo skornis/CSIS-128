@@ -12,10 +12,6 @@ body {
     font-size: larger;
 }
 
-.cyan nav a{
-    border: 2px solid cyan !important;
-}
-
 .container p {
     padding: 24px;
     opacity: .8;
@@ -32,19 +28,11 @@ body {
     font-size: larger;
 }
 
-.neon nav a {
-	border: 2px solid greenyellow;
-}
-
 .orange {
     color: orange !important;
     font-family: 'consolas', sans-serif;
     font-weight: bold;
     font-size: larger;
-}
-
-.orange nav a{
-	border: 2px solid orange;
 }
 
 .crimson{
@@ -81,6 +69,7 @@ nav a {
     margin-right: 12px;
     background-color:  rgb(25, 25, 25);
     border-radius: 12px;
+    border: 2px solid;
 }
 
 a {	
