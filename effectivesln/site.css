@@ -10,6 +10,7 @@ body {
     font-family: 'consolas', sans-serif;
     font-weight: bold;
     font-size: larger;
+	border: 1px solid cyan;
 }
 
 .container p {
