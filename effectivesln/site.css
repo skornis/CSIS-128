@@ -10,6 +10,9 @@ body {
     font-family: 'consolas', sans-serif;
     font-weight: bold;
     font-size: larger;
+}
+
+.cyan a {
     border: 1px solid cyan !important;
 }
 
@@ -21,6 +24,7 @@ body {
     background-color: rgb(15,15,15);
     border-radius: 24px;
 }
+
 .neon {
     color: greenyellow !important;
     font-family: 'consolas', sans-serif;
@@ -71,6 +75,7 @@ nav a {
     border-radius: 12px;
     border: 2px solid rgb(25, 25, 25);
 }
+
 a {	
 	font-weight: bold;
     font-size: 20px;
